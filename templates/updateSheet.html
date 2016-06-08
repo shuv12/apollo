@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>updateSheet</title>
+</head>
+
+<body>
+    <h2>UPDATE SHEET</h2>
+    <form action="/updateSheetValue" method="post">
+      <table>
+        <tr>
+          <td class="label">
+            Length
+          </td>
+          <td>
+            <input type="float" name="length" value="{{updateLength}}">
+          </td>
+        </tr>
+
+        <tr>
+          <td class="label">
+            Breadth
+          </td>
+          <td>
+            <input type="float" name="breadth" value="{{updateBreadth}}">
+          </td>
+        </tr>
+        <tr>
+          <td class="label">
+            GSM
+          </td>
+          <td>
+            <input type="float" name="gsm" value="{{updateGsm}}">
+          </td>
+        </tr>
+        <tr>
+          <td class="label">
+           Ruling/kg
+          </td>
+          <td>
+            <input type="float" name="rpk" value="{{updateRpk}}">
+          </td>
+        </tr>
+        <tr>
+          <td class="label">
+            sheetCost/kg
+          </td>
+          <td>
+            <input type="float" name="scpk" value="{{updateScpk}}">
+          </td>
+        </tr>
+      </table>
+      <input type="hidden" name="updatekey" value="{{updatekey}}"> 
+      <input type="submit" value="add">
+  </form>
+</body>
+</html>
+

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+th, td {
+    padding: 5px;
+}
+</style>
+</head>
+
+<body>
+{% block content %}
+	<h1>Sheet Database </h1>
+	<table style="width:100%">
+		<tr>
+			<th>Length</th>
+			<th>Breadth</th>
+			<th>GSM</th>
+			<th>RulingRate\Kg</th>
+			<th>SheetRate\Kg</th>
+			<th>Weight\Ream</th>
+			<th>RulingCost\Ream</th>
+			<th>SheetCost\Ream</th>
+			<th>FinalCost\Ream</th>
+			<th>Sheet_ID</th>
+		</tr>
+	{% for s in sheets %}
+		<tr>
+			<td>{{s.length}}</td>
+			<td>{{s.breadth}}</td>
+			<td>{{s.gsm}}</td>
+			<td>{{s.rulingRatePerkg}}</td>
+			<td>{{s.sheetRatePerkg}}</td>
+			<td>{{s.weightPerReam}}</td>
+			<td>{{s.rulingCostPerReam}}</td>
+			<td>{{s.sheetCostPerReam}}</td>
+			<td>{{s.finalCostPerReam }}</td>
+			<td>{{s.key().id()}}</td>
+		</tr>
+	{% endfor %}
+	</table>
+{% endblock %}
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+th, td {
+    padding: 5px;
+}
+</style>
+</head>
+
+<body>
+{% block content %}
+	<h1>Cover Database </h1>
+	<table style="width:100%">
+		<tr>
+			<th>Length</th>
+			<th>Breadth</th>
+			<th>GSM</th>
+			<th>CostCoverSheet\Kg</th>
+			<th>PrintingCost\Ream</th>
+			<th>LaminationDiscount</th>
+			<th>SheetWeight\Ream</th>
+			<th>CoverCost\Ream</th>
+			<th>LaminationCost\Sheet</th>
+			<th>LaminationCost/wDIS\Ream</th>
+			<th>FinalCoverCost\Ream</th>
+			<th>FinalCoverCost\Sheet</th>
+			<th>Cover_ID</th>
+		</tr>
+	{% for c in covers %}
+		<tr>
+			<td>{{c.length}}</td>
+			<td>{{c.breadth}}</td>
+			<td>{{c.gsm}}</td>
+			<td>{{c.costcoverSheetperkg}}</td>
+			<td>{{c.PrintingCostperReam}}</td>
+			<td>{{c.LaminationDiscount}}</td>
+			<td>{{c.SheetWeightperReam}}</td>
+			<td>{{c.CostPerReam}}</td>
+			<td>{{c.LaminationperSheet}}</td>
+			<td>{{c.LaminationperReamwdis}}</td>
+			<td>{{c.finalCostCoverperReam}}</td>
+			<td>{{c.finalCostCoverperSheet}}</td>
+			<td>{{c.key().id()}}</td>
+		</tr>
+	{% endfor %}
+	</table>
+{% endblock %}
+</body>
+</html>

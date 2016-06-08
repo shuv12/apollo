@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>updateCover</title>
+</head>
+
+<body>
+    <h2>UPDATE COVER</h2>
+    <form action="/updateCoverValue" method="post">
+      <table>
+        <tr>
+          <td class="label">
+            Length
+          </td>
+          <td>
+            <input type="text" name="length" value="{{length}}">
+          </td>
+        </tr>
+
+        <tr>
+          <td class="label">
+            Breadth
+          </td>
+          <td>
+            <input type="text" name="breadth" value="{{breadth}}">
+          </td>
+        </tr>
+        <tr>
+          <td class="label">
+            GSM
+          </td>
+          <td>
+            <input type="text" name="gsm" value="{{gsm}}">
+          </td>
+        </tr>
+        <tr>
+          <td class="label">
+           costcoverSheet\kg
+          </td>
+          <td>
+            <input type="text" name="ccspk" value="{{ccspk}}">
+          </td>
+        </tr>
+        <tr>
+          <td class="label">
+            PrintingCost\Ream
+          </td>
+          <td>
+            <input type="text" name="pcpr" value="{{pcpr}}">
+          </td>
+        </tr>
+        <tr>
+          <td class="label">
+            LaminationDiscountinPercent - %
+          </td>
+          <td>
+            <input type="text" name="ld" value="{{ld}}">
+          </td>
+        </tr>
+      </table>
+      <input type="hidden" name="updatekey" value="{{updatekey}}"> 
+      <input type="submit" value="add">
+  </form>
+</body>
+</html>

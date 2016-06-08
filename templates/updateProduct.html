@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>updateProduct</title>
+</head>
+
+<body>
+    <h2>UPDATE PRODUCT</h2>
+    <form action="/updateProductValue" method="post">
+      <table>
+        <tr>
+          <td class="label">
+            Product Name
+          </td>
+          <td>
+            <input type="text" name="product_name" value="{{product_name}}">
+          </td>
+        </tr>
+        <tr>
+          <td class="label">
+            Product Number
+          </td>
+          <td>
+            <input type="text" name="product_no" value="{{product_no}}">
+          </td>
+        </tr>
+        <tr>
+          <td class="label">
+            Pages
+          </td>
+          <td>
+            <input type="text" name="pages" value="{{pages}}">
+          </td>
+        </tr>
+        <tr>
+          <td class="label">
+            Length
+          </td>
+          <td>
+            <input type="text" name="length" value="{{length}}">
+          </td>
+        </tr>
+        <tr>
+          <td class="label">
+            Breadth
+          </td>
+          <td>
+            <input type="text" name="breadth" value="{{breadth}}">
+          </td>
+        </tr>
+        <tr>
+          <td class="label">
+            PageSheet_ID
+          </td>
+          <td>
+            <input type="text" name="psid" value="{{psid}}">
+          </td>
+        </tr>
+        <tr>
+          <td class="label">
+           Pages\Sheet
+          </td>
+          <td>
+            <input type="text" name="pps" value="{{pps}}">
+          </td>
+        </tr>
+        <tr>
+          <td class="label">
+            CoverSheet_ID
+          </td>
+          <td>
+            <input type="text" name="csid" value="{{csid}}">
+          </td>
+        </tr>
+        <tr>
+          <td class="label">
+            Cover\CoverSheet
+          </td>
+          <td>
+            <input type="text" name="cpcs" value="{{cpcs}}">
+          </td>
+        </tr>
+        <tr>
+          <td class="label">
+            Miscellaneous Cost
+          </td>
+          <td>
+            <input type="text" name="ms" value="{{ms}}">
+          </td>
+        </tr>
+        <tr>
+          <td class="label">
+            Labour Cost
+          </td>
+          <td>
+            <input type="text" name="lc" value="{{lc}}">
+          </td>
+        </tr>
+        <tr>
+          <td class="label">
+            Profit%
+          </td>
+          <td>
+            <input type="text" name="profit" value="{{profit}}">
+          </td>
+        </tr>
+      </table>
+      <input type="hidden" name="updatekey" value="{{updatekey}}">
+      <input type="submit" value="add">
+  </form>
+</body>
+</html>
+

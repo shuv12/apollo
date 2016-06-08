@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+th, td {
+    padding: 5px;
+}
+</style>
+</head>
+
+<body>
+{% block content %}
+	<h1>Product Database</h1>
+	<table style="width:100%">
+		<tr>
+			<th>productName</th>
+			<th>productNumber</th>
+			<th>pages</th>
+			<th>length</th>
+			<th>breadth</th>
+			<th>pSheetId</th>
+			<th>pagesPerSheet</th>
+			<th>cSheetId</th>
+			<th>coverPerSheet</th>
+			<th>miscellaneousCost</th>
+			<th>labourCost</th>
+			<th>profit</th>
+			<th>costofSheetperReam</th>
+			<th>costofCoverSheetperReam</th>
+			<th>costofPaperinProduct</th>
+			<th>costofCoverinProduct</th>
+			<th>manufactureCost</th>
+			<th>afterProfit</th>
+			<th>productPrice</th>
+			<th>sellingPricePerGross</th>
+			<th>Product_ID</th>
+		</tr>
+	{% for p in products %}
+		<tr>
+			<td>{{p.productName}}</td>
+			<td>{{p.productNumber}}</td>
+			<td>{{p.pages}}</td>
+			<td>{{p.length}}</td>
+			<td>{{p.breadth}}</td>
+			<td>{{p.pSheetId}}</td>
+			<td>{{p.pagesPerSheet}}</td>
+			<td>{{p.cSheetId}}</td>
+			<td>{{p.coverPerSheet}}</td>
+			<td>{{p.miscellaneousCost}}</td>
+			<td>{{p.labourCost}}</td>
+			<td>{{p.profit}}</td>
+			<td>{{p.costofSheetperReam}}</td>
+			<td>{{p.costofCoverSheetperReam}}</td>
+			<td>{{p.costofPaperinProduct}}</td>
+			<td>{{p.costofCoverinProduct}}</td>
+			<td>{{p.manufactureCost}}</td>
+			<td>{{p.afterProfit}}</td>
+			<td>{{p.productPrice}}</td>
+			<td>{{p.sellingPricePerGross}}</td>
+			<td>{{p.key().id()}}</td>
+		</tr>
+	{% endfor %}
+	</table>
+{% endblock %}
+</body>
+</html>
